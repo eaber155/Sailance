@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_add_new_members"
+            android:icon="@drawable/ic_supervisor_account_black_24dp"
+            android:title="@string/nav_new_members" />
+        <item
+            android:id="@+id/nav_manage_member_details"
+            android:icon="@drawable/ic_camera_black_24dp"
+            android:title="@string/nav_manage_members" />
+
+        <item
+            android:id="@+id/nav_add_admin"
+            android:icon="@drawable/ic_perm_identity_black_24dp"
+            android:title="@string/nav_add_admin" />
+    </group>
+
+    <item android:title="@string/handicap_links">
+        <menu>
+            <item
+                android:id="@+id/view_personal_handicaps"
+                android:icon="@drawable/ic_recent_actors_black_24dp"
+                android:title="@string/personal_handicap" />
+
+            <item
+                android:id = "@+id/view_boat_handicap"
+                android:icon="@drawable/ic_photo_library_black_24dp"
+                android:title="@string/boat_handicap"/>
+        </menu>
+    </item>
+
+    <item android:title="@string/races_link">
+        <menu>
+            <item
+                android:id="@+id/view_previous_races"
+                android:icon="@drawable/ic_history_black_24dp"
+                android:title="@string/activity_race_history"/>
+
+            <item
+                android:id="@+id/start_new_race"
+                android:icon="@drawable/ic_rowing_black_24dp"
+                android:title="@string/activity_title_new_race"/>
+        </menu>
+    </item>
+
+    <item android:title="@string/others">
+        <menu>
+            <item
+                android:id="@+id/settings"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="@string/activity_settings"/>
+
+            <item
+                android:id="@+id/about_us"
+                android:icon="@drawable/ic_schedule_black_24dp"
+                android:title="@string/activity_about_us"/>
+        </menu>
+    </item>
+</menu>

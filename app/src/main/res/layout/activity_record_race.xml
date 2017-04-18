@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.evivian.admin.sailance.timer.RecordRaceActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:layout_width="match_parent">
+
+        <Button
+            android:id="@+id/allstartbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/startall"
+            android:onClick="AllStart"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="#9C27B0"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/allstopButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stopall"
+            android:onClick="AllStop"
+            android:layout_toRightOf="@id/allstartbutton"
+            android:layout_toEndOf="@id/allstartbutton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="#9C27B0"
+            android:layout_alignBaseline="@id/allstartbutton"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/timeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textSize="20sp"
+            android:textColor="#9C27B0"
+            android:layout_alignBaseline="@id/allstopButton"
+            android:layout_toRightOf="@id/allstopButton"
+            android:layout_toEndOf="@id/allstopButton"
+            android:text="@string/timeValue"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/testDatabase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/openDatabase"
+            android:onClick="OpenDatabase"
+            android:layout_toRightOf="@id/timeValue"
+            android:layout_toEndOf="@id/timeValue"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="#9C27B0"
+            android:layout_alignBaseline="@id/timeValue"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+    <GridView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:columnWidth="100dp"
+        android:verticalSpacing="5dp"
+        android:horizontalSpacing="5dp"
+        android:stretchMode="columnWidth"
+        android:numColumns="auto_fit"
+        android:gravity="center"
+        android:id="@+id/gridView"
+        tools:context="com.timeisreal.admin.chronometerexample.MainActivity">
+    </GridView>
+
+</LinearLayout>

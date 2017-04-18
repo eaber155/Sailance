@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="clubactivity.NewRaceActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/adjFactor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/members"/>
+
+        <Spinner
+            android:layout_weight="4"
+            android:id="@+id/spinnerMembers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+        </Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/boatID"/>
+
+        <EditText
+            android:layout_weight="4"
+            android:id="@+id/boatID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text">
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/boatType"/>
+
+        <Spinner
+            android:layout_weight="4"
+            android:id="@+id/spinnerBoatType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+        </Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/personalHandicap"/>
+
+        <EditText
+            android:layout_weight="4"
+            android:id="@+id/personalHandicap"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="none">
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_weight="2"
+            android:id="@+id/addToRace"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/addToRace"
+            android:textAllCaps="false"
+            style="?android:buttonBarButtonStyle"/>
+
+        <Button
+            android:layout_weight="2"
+            android:id="@+id/startRace"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/startRace"
+            android:textAllCaps="false"
+            style="?android:buttonBarButtonStyle"/>
+
+        <Button
+            android:layout_weight="2"
+            android:id="@+id/addGuestSailor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/addGuestMember"
+            android:textAllCaps="false"
+            style="?android:buttonBarButtonStyle"/>
+    </LinearLayout>
+</LinearLayout>

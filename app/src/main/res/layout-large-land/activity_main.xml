@@ -1,148 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.evivian.admin.sailance.MainActivity"
-    android:background="#E1F5FE"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    tools:context=".MainActivity">
+
     <TextView
         android:id="@+id/logoinfo"
         android:text="@string/catchphrase"
-        android:layout_weight="3"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
         android:drawableTop="@drawable/boatpicture"
+       android:layout_centerHorizontal="true"
         android:gravity="center"
         android:textSize="20sp"
         android:textStyle="bold|italic"
-        android:textColor="#9C27B0"
-        android:layout_marginBottom="20dp"/>
+        android:textColor="@color/textColor_general"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentTop="true"/>
 
-    <RelativeLayout
-        android:id="@+id/logincontainer"
-        android:layout_weight="4"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:layout_margin="10dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/signin"
-            android:id="@+id/signinprompt"
-            android:textSize="25sp"
-            android:textStyle="italic"
-            android:textColor="#9C27B0"
-            android:paddingBottom="15dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginStart="10dp"/>
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:id="@+id/table_signin"
-            android:layout_below="@+id/signinprompt"
-            android:layout_marginStart="20dp">
-
-            <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_weight="0"
-                    android:layout_height="wrap_content"
-                    android:text="@string/email"
-                    android:textSize="15sp"/>
-
-                <EditText
-                    android:layout_weight="1"
-                    android:id="@+id/emailinfo"
-                    android:inputType="textEmailAddress"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/emailhint"/>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_weight="0"
-                    android:layout_height="wrap_content"
-                    android:text="@string/password"
-                    android:textSize="15sp"/>
-
-                <EditText
-                    android:layout_weight="1"
-                    android:id="@+id/passwordinfo"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"/>
-            </TableRow>
-        </TableLayout>
-        <Button
-            android:id="@+id/loginButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#BA68C8"
-            android:layout_below="@+id/table_signin"
-            android:text="@string/logintext"
-            android:layout_marginRight="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:onClick="Login"/>
-    </RelativeLayout>
-
-    <LinearLayout
-        android:id="@+id/signup"
-        android:layout_weight="1"
+    <TextView
+        android:id="@+id/textViewAd"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_gravity="center">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/registerbutton"
-            android:textColor="#9C27B0"
-            android:layout_marginRight="10dp"
-            android:layout_marginEnd="10dp"
-            android:textSize="15sp"/>
-
-        <Button
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:text="@string/signup"
-            android:background="?android:attr/selectableItemBackground"
-            android:textColor="#9C27B0"
-            android:onClick="SignUp"
-            android:textStyle="bold"/>
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        android:text="@string/welcomeMessage"
+        android:textSize="@dimen/welcomeTextSize"
+        android:textStyle="bold|italic"
+        android:layout_below="@+id/logoinfo"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="20dp"/>
 
     <Button
-        android:id="@+id/openclubaccount"
-        android:layout_weight="1"
+        android:id="@+id/openClubAccount"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/clubPrompt"
+        android:textAllCaps="false"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/textViewAd"
+        android:background="?android:selectableItemBackground"
+        android:textColor="@color/textColor_general"
+        android:layout_margin="20dp"
         android:layout_gravity="center"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:text="@string/openClubAccount"
-        android:background="?android:attr/selectableItemBackground"
-        android:layout_marginBottom="10dp"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:onClick="RegisterClub"
-        android:textColor="#9C27B0"
-        android:textAllCaps="false"/>
-</LinearLayout>
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/signUpNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/openClubAccount"
+        android:background="?android:selectableItemBackground"
+        android:text="@string/mainSignup"
+        android:textAllCaps="false"
+        android:layout_margin="20dp"
+        android:textColor="@color/buttonColor_general"
+        android:layout_gravity="center"
+        android:textStyle="bold" />
+</RelativeLayout>

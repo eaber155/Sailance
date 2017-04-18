@@ -2,10 +2,22 @@
 
 buildscript {
     repositories {
+        mavenCentral()
+
         jcenter()
+        if (project.hasProperty('local.repo'))
+        {
+            maven { name 'glide-local'; url project.property('local.repo') }
+        }
+        maven { name 'glide-snapshot'; url 'http://oss.sonatype.org/content/repositories/snapshots' }
+        flatDir name: 'libs', dirs: 'libs'
+        maven
+                {
+                    url "https://jitpack.io"
+                }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'com.android.tools.build:gradle:2.3.0'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
